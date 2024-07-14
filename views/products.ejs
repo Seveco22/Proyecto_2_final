@@ -1,0 +1,26 @@
+<%- include('partials/header', { title: 'Productos' }) %>
+<div class="container mt-5">
+    <h1 class="text-center">Productos</h1>
+    <a href="/products/create" class="btn btn-primary mb-3">Crear Producto</a>
+    <div class="row">
+        <% products.forEach(product => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= product.name %></h5>
+                        <p class="card-text"><%= product.description %></p>
+                        <p class="card-text">Precio: $<%= product.price %></p>
+                        <p class="card-text">Categoría: <%= product.Category.name %></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/products/edit/<%= product.id %>" class="btn btn-warning">Editar</a>
+                        <form action="/products/delete/<%= product.id %>" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,21 @@
+<%- include('partials/header', { title: 'Gestionar Usuarios' }) %>
+<div class="container mt-5">
+    <h1 class="text-center">Usuarios Registrados</h1>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.email %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+<%- include('partials/footer') %>

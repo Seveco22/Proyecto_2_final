@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+form button, .button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;  /* Quitar subrayado */
+}
+
+form button:hover, .button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #cccccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin: 10px 0;
+}
+
+.product a, .product form button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;  /* Quitar subrayado */
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.product a:hover, .product form button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}

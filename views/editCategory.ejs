@@ -1,0 +1,12 @@
+<%- include('partials/header', { title: 'Editar Categoría' }) %>
+<div class="container mt-5">
+    <h1 class="text-center">Editar Categoría</h1>
+    <form action="/categories/edit/<%= category.id %>" method="POST" class="mt-4">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" class="form-control" value="<%= category.name %>" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,31 @@
+<%- include('partials/header', { title: 'Dashboard' }) %>
+<div class="container mt-5">
+    <h1 class="text-center">Bienvenido, <%= user.email %></h1>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Perfil de Administrador</h4>
+                </div>
+                <div class="card-body">
+                    <p><strong>Email:</strong> <%= user.email %></p>
+                    <p><strong>ID de Usuario:</strong> <%= user.id %></p>
+                    <!-- Añadir más información del usuario aquí -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Opciones de Administración</h4>
+                </div>
+                <div class="card-body">
+                    <a href="/products" class="btn btn-primary btn-block">Gestionar Productos</a>
+                    <a href="/users/manage" class="btn btn-primary btn-block">Gestionar Usuarios</a>
+                    <!-- Añadir más opciones de administración aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>
